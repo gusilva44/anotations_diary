@@ -1,9 +1,11 @@
 import { Router } from 'express'
-const endpoints = Router()
-import * as service from '../services/authService.js'
 import { autenticar } from '../middleware/autenticado.js';
 import { formatarError, logError } from '../utils/error.js';
 import autorizarTipo from '../middleware/autorizarTipo.js';
+
+import * as service from '../services/authService.js'
+
+const endpoints = Router()
 
 endpoints.post('/auth/cadastrar', async (req, res) => {
     try {

@@ -1,8 +1,9 @@
 import { autenticar } from '../middleware/autenticado.js';
 import { Router } from 'express'
-import * as service from '../services/adminService.js'
 import autorizarTipo from '../middleware/autorizarTipo.js';
 import { formatarError, logError } from '../utils/error.js';
+
+import * as service from '../services/adminService.js'
 
 const endpoints = Router()
 
